@@ -3,7 +3,6 @@ FROM python:alpine AS base
 WORKDIR /app
 COPY requirements.txt .
 RUN apk add --no-cache git
-RUN apk add --no-cache neovim
 RUN pip install -r requirements.txt
 
 # Stage to allow init mkdocs project
@@ -12,6 +11,7 @@ CMD ["mkdocs", "new", "example"]
 
 # Stage to dev locally, pas de copy car on bind mount
 FROM base as dev
+RUN apk add --no-cache neovim
 CMD ["mkdocs", "serve", "-a", "0.0.0.0:8000"]
 
 # On build la doc en elle même
