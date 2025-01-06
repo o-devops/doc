@@ -45,6 +45,8 @@ nav:
     - Les textes: markdown/Texte.md
     - Le code: markdown/Code.md
     - Les tableaux: markdown/tableaux.md
+  - Ansible:
+    - Introduction à Ansible: ansible/intro.md
 
 markdown_extensions:
   #- mdx_truly_sane_lists # for mkdocs to indent nested lists with 2 spaces VS 4 by default
