@@ -1,7 +1,0 @@
-mkdocs
-pymdown-extensions
-mdx_truly_sane_lists
-pygments
-mkdocs-material
-mkdocs-video
-mkdocs-git-revision-date-localized-plugin
