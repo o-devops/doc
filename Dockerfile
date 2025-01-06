@@ -3,6 +3,7 @@ FROM python:alpine AS base
 WORKDIR /app
 COPY requirements.txt .
 RUN apk add --no-cache git
+RUN apk add --no-cache neovim
 RUN pip install -r requirements.txt
 
 # Stage to allow init mkdocs project
