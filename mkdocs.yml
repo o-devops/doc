@@ -40,6 +40,10 @@ nav:
     - Les hooks git: github/git-hooks.md
     - Introduction à Github Action: github/ga-intro.md
     - Le local runner: github/ga-local-runner.md
+  - Markdown:
+    - Les textes: markdown/Texte.md
+    - Le code: markdown/Code.md
+    - Les tableaux: markdown/tableaux.md
 
 markdown_extensions:
   #- mdx_truly_sane_lists # for mkdocs to indent nested lists with 2 spaces VS 4 by default
