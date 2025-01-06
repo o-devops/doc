@@ -1,0 +1,14 @@
+{
+    "dockerFile": "../Dockerfile",
+    "build": {
+        "target": "dev"
+    },
+    "postStartCommand": "mkdocs serve",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "redhat.vscode-yaml"
+            ]
+        }
+    }
+}
