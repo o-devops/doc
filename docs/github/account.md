@@ -25,7 +25,7 @@ Dans une organisation chaque utilisateur est associé à un rôle qui lui donne 
 
 Le rôle avec le plus grand privilièges est le rôle **owner** qui dispose de tous les droits.
 
-Le rôle **members** dispose de droits limité mais autorise la création de dépôt et projets.
+Le rôle **members** dispose de droits limité mais autorise la création de dépôt et projet.
 
 Plus d'information sur les autre rôles [ici](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization)
 
