@@ -1,6 +1,7 @@
 # doc
 
 ![Cowsay running](https://github.com/o-devops/doc/actions/workflows/cowsay.yml/badge.svg)
+[![Super-Linter](https://github.com/o-devops/doc/actions/workflows/linter.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
 La documentation de notre formation DevOps
 
