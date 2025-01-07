@@ -31,7 +31,7 @@ Pour créer une recette Github action il faut créer un fichier ici : `.github/w
 
 Par exemple :
 
-```
+```bash
 code .github/workflows/ma-recette.yml
 ```
 
@@ -87,7 +87,7 @@ Un job s'exécute sur un seul runner, il faut donc spécifier le runner dans le 
 
 Le but ici est d'écrire notre premier workflow et de visualiser son exécution.
 
-```
+```yaml
 name: Cowsay Workflow
 
 # Le workflow se déclenchera quand on fera un git push sur main
@@ -125,7 +125,7 @@ Vous pouvez intégrer dans votre fichier README.md un badge Github pour surveill
 
 Pour cela il suffit d'inclure dans le markdown de votre fichier markdown READM.md le contenu suivant :
 
-```
+```markdown
 ![Cowsay running](https://github.com/profy12-mon-orga/doc/actions/workflows/cowsay.yml/badge.svg)
 ```
 

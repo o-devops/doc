@@ -29,7 +29,7 @@ Le rôle **members** dispose de droits limité mais autorise la création de dé
 
 Plus d'information sur les autre rôles [ici](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization)
 
-# Les comptes utilisateur
+## Les comptes utilisateur
 
 Chacun dispose d'un compte personnel qui peut être rattaché à 0, un ou plusieurs organisation, il peut aussi disposer d'un accès administrateur à un ou plusieurs compte entreprise.
 

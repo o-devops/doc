@@ -13,7 +13,7 @@ Si vous avez un hébergement classique en standalone (vps/ec2/raspberry pi auto 
 Dans ce cas vous pouvez imaginer deux scénari de workflow :
 
 - Un workflow à l'ancienne qui va copier le code et le mettre au bon endroit sur votre serveur (par exemple /var/www/html). C'est le scénario que nous allons retenir.
-- Un workflow un peu plus moderne qui va utiliser l'environnement Docker de votre serveur pour lancer l'application, par exemple via un Docker Compose. 
+- Un workflow un peu plus moderne qui va utiliser l'environnement Docker de votre serveur pour lancer l'application, par exemple via un Docker Compose.
 
 
 ## Pré-requis
@@ -54,8 +54,8 @@ Ecrivez un premier workflow simple qui affiche un simple `Hello Devops !`, le wo
 
 - Connectez le workflow a deux events, le push main et schedule
 - Dans job nommé deploy
-    * Récuperer le code du projet de documentation
-    * copier les fichier statiques dans le répertoire servi par votre serveur web (/var/www/html/ pour Apache2)
+  * Récuperer le code du projet de documentation
+  * copier les fichier statiques dans le répertoire servi par votre serveur web (/var/www/html/ pour Apache2)
 
 ## Test du workflow
 
