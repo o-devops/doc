@@ -46,7 +46,7 @@ Il faut savoir que les commit messages peuvent être écrasé lors du merge d'un
 
 Le répertoire `.git/hooks/` ne fait pas partie du dépôt Git, ce n'est donc pas possible de le commit ou de le paramétrer via ce biais sur un serveur git distant, c'est d'ailleurs la raison qui fait que les hooks clients ne peuvent pas être définis et partagé via ce biais.
 
-Si les scripts sample existent c'est que Git fonctionne de manière décentralisé et chaque utilisateur de Git est à la fois serveur et client. 
+Si les scripts sample existent c'est que Git fonctionne de manière décentralisé et chaque utilisateur de Git est à la fois serveur et client.
 
 Vous n'avez donc pas la possibilité de définir un hook git sur le serveur en modifiant un hook de post receive par exemple.
 
