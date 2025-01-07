@@ -1,5 +1,7 @@
 # doc
 
+![Cowsay running](https://github.com/o-devops/doc/actions/workflows/cowsay.yml/badge.svg)
+
 La documentation de notre formation DevOps
 
 ## kick start
