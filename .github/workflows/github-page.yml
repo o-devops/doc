@@ -2,6 +2,7 @@
 name: Upload de github pages
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
