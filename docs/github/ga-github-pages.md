@@ -15,4 +15,4 @@ Pour que cela fonctionne il faut tout de même mettre en jeu deux mécanismes :
 
 Ces deux actions sont en réalité des actions Github action disponible dans le marketplace, il suffit donc d'écrire un workflow Github Action.
 
-
+![alt text](image.png)
