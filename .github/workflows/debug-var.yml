@@ -15,3 +15,7 @@ jobs:
       - run: echo $MSG
         env:
           MSG: ${{ vars.MSG }}
+      - run: |
+          echo "Chut ne le repetez pas : $SECURE_MSG"
+        env:
+          SECURE_MSG: ${{ secrets.SECURE_MSG }}
