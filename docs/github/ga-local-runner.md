@@ -76,6 +76,47 @@ Ecrivez un premier workflow simple qui affiche un simple `Hello Devops !`, le wo
 
 Effectuez un commit dans main avec votre workflow et vérifiez si le site est bien déployé sur le serveur.
 
+Exemple de workflow fonctionnel :
+
+```markdown
+---
+name: preprod release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - preprod
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get data from repository
+        uses: actions/checkout@v4
+
+      - run: docker build --target build -t mkdocs-builder .
+
+      - run: docker container run --rm -v ./site:/app/site mkdocs-builder
+
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-artifact@v4 # or specific "vX.X.X" version tag for this action
+        with:
+          path: site/
+          name: notredoc
+  deploy:
+    runs-on: self-hosted
+    needs: build
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: /var/www/html
+          name: notredoc
+```
+
+
 ## Conclusion
 
 Le runner local vous permet de déployer très rapidement vos modifications sur un serveur de production et d'automatiser tout le processus de mise à jour.
