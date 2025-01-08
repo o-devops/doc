@@ -17,14 +17,18 @@ jobs:
       - name: Get data from repository
         uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.13'
+#      - uses: actions/setup-python@v5
+#        with:
+#          python-version: '3.13'
+#
+#      - run: pip install -r requirements.txt
+#
+#      - name: generate static files
+#        run: mkdocs build
 
-      - run: pip install -r requirements.txt
+      - run: docker build --target build -t mkdocs-builder .
 
-      - name: generate static files
-        run: mkdocs build
+      - run: docker container run --rm -v ./site:/app/site mkdocs-builder
 
       - name: Upload static files as artifact
         id: deployment

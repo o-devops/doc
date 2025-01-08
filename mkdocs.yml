@@ -41,6 +41,7 @@ nav:
     - Introduction à Github Action: github/ga-intro.md
     - Le local runner: github/ga-local-runner.md
     - Merge PR: github/merge.md
+    - Github pages: github/ga-github-pages.md
   - Markdown:
     - Les textes: markdown/Texte.md
     - Le code: markdown/Code.md
