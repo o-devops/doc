@@ -8,7 +8,7 @@ tags:
 
 Lorsque vous avez un site statique à déployer, le plus simple peut être d'utiliser les github pages, ce système permet de publier simplement des sites web directement depuis votre dépôt.
 
-Pour que cela fonctionne il faut tout de même mettre en jeu deux mécanismes :
+Pour que cela fonctionne il faut tout de même mettre en jeux deux mécanismes :
 
 - upload votre site statique dans un artifact (sorte d'espace de stockage)
 - activer la github page avec le contenu de votre artifact
@@ -77,12 +77,16 @@ jobs:
         uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
 ```
 
+!!! warning
+    Il faut penser à activer les github page via Github Action dans le dépôt concerné, si ce n'est pas le cas suivez le message d'erreur qui vous indiquera ce qu'il faut faire.
+
+
 ## Logique DevOps
 
 Notre méthode de travail avec Github page permet de proposer à la fois un environnement de développement local et un environnement de déploiement en production.
 
-Les deux environnements sont identique car ils utilisent la même image Docker et donc exactement les même dépendances.
+Les deux environnements sont identiquent car ils utilisent la même image Docker et donc exactement les même dépendances.
 
-Cependant le build de l'image Docker n'est pas commun et est fait dans des environements différents. Ca reste tolérable.
+Cependant le build de l'image Docker n'est pas commun et est fait dans des environements différents. Cela reste tolérable les différence de build Docker n'ont que peu d'impact sur le fonctionnement de l'application finale.
 
 ![alt text](image-1.png)
