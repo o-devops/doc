@@ -12,6 +12,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - run: ls -alh
-      - run: whoami
-      - run: cp index.html /var/www/html/
+      - name: test env and deploy a sample html file
+        run: |
+          ls -alh
+          whoami
+          cp index.html /var/www/html/
