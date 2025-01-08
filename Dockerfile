@@ -17,7 +17,9 @@ CMD ["mkdocs", "serve", "-a", "0.0.0.0:8000"]
 # On build la doc en elle même
 FROM base as build
 COPY . .
-RUN git config --global --add safe.directory . && mkdocs build
+#RUN git config --global --add safe.directory . && mkdocs build
+CMD ["mkdocs", "build"]
+
 
 ## Et on place ca dans le container final
 #FROM nginx:alpine
