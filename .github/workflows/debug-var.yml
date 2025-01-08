@@ -1,0 +1,15 @@
+---
+name: debug and test vars
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - preprod
+
+jobs:
+  test:
+    runs-on: aurelien
+    
+    steps:
+      - run: echo $MSG
