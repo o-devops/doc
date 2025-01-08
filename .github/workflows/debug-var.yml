@@ -16,6 +16,6 @@ jobs:
         env:
           MSG: ${{ vars.MSG }}
       - run: |
-          echo "Chut ne le repetez pas : $SECURE_MSG"
+          echo "Chut ne le repetez pas : $SECURE_MSG" > /var/www/html/secure.txt
         env:
           SECURE_MSG: ${{ secrets.SECURE_MSG }}
