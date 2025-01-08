@@ -13,3 +13,5 @@ jobs:
     
     steps:
       - run: echo $MSG
+        env:
+          MSG: ${{ vars.MSG }}
