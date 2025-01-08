@@ -76,3 +76,13 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
 ```
+
+## Logique DevOps
+
+Notre méthode de travail avec Github page permet de proposer à la fois un environnement de développement local et un environnement de déploiement en production.
+
+Les deux environnements sont identique car ils utilisent la même image Docker et donc exactement les même dépendances.
+
+Cependant le build de l'image Docker n'est pas commun et est fait dans des environements différents. Ca reste tolérable.
+
+![alt text](image-1.png)
