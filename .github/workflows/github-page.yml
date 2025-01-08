@@ -14,18 +14,23 @@ jobs:
     # <Not provided for brevity>
     # At a minimum this job should upload artifacts using actions/upload-pages-artifact
     steps:
-      - name: Get index.html from repository
+      - name: Get data from repository
         uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
         with:
-          sparse-checkout: |
-            index.html
-          sparse-checkout-cone-mode: false
+          python-version: '3.13'
+
+      - run: pip install -r requirements.txt
+
+      - name: generate static files
+        run: mkdocs build
 
       - name: Upload static files as artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
         with:
-          path: .
+          path: site/
 
   # Deploy job
   deploy:
