@@ -1,0 +1,22 @@
+---
+name: debug and test vars
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - preprod
+
+jobs:
+  test:
+    runs-on: aurelien
+    
+    steps:
+      - run: echo $MSG
+        env:
+          MSG: ${{ vars.MSG }}
+      - run: |
+          echo "Chut ne le repetez pas : $SECURE_MSG" > /var/www/html/secure.txt
+        env:
+          SECURE_MSG: ${{ secrets.SECURE_MSG }}
+      - run: cat /var/www/html/secure.txt

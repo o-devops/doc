@@ -42,6 +42,7 @@ nav:
     - Le local runner: github/ga-local-runner.md
     - Merge PR: github/merge.md
     - Github pages: github/ga-github-pages.md
+    - Les variables et secrets: github/ga-vars-and-secrets.md
   - Markdown:
     - Les textes: markdown/Texte.md
     - Le code: markdown/Code.md

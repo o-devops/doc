@@ -27,11 +27,26 @@ Sur notre serveur nous devons avoir au préalable :
 
 En utilisant l'utilisateur par défaut (student ou ubuntu) installez le runner Github Action, en suivant la documentation.
 
-Terminez l'installation en installant le service système avec `./svc.sh install`
+![alt text](image-2.png)
 
-Modifier le fichier de service généré dans `/etc/systemd/system/action-...` pour le lancer avec votre compte utilisateur.
+
+Terminez l'installation en installant le service système avec `sudo ./svc.sh install`
+
+Vérifiez le fichier généré automatiquement dans `/etc/systemd/system/action-...`.
+
+Lancez et activez votre service :
+
+```shell
+sudo -i
+systemctl daemon-reload
+systemctl start worker-...
+systemctl enable worker-...
+systemctl status worker-...
+```
 
 Vérifiez dans l'interface Github que le runner est bien up est dans l'état `idle`
+
+![alt text](image-3.png)
 
 ## Préparez une application web à déployer
 
@@ -60,6 +75,47 @@ Ecrivez un premier workflow simple qui affiche un simple `Hello Devops !`, le wo
 ## Test du workflow
 
 Effectuez un commit dans main avec votre workflow et vérifiez si le site est bien déployé sur le serveur.
+
+Exemple de workflow fonctionnel :
+
+```markdown
+---
+name: preprod release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - preprod
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get data from repository
+        uses: actions/checkout@v4
+
+      - run: docker build --target build -t mkdocs-builder .
+
+      - run: docker container run --rm -v ./site:/app/site mkdocs-builder
+
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-artifact@v4 # or specific "vX.X.X" version tag for this action
+        with:
+          path: site/
+          name: notredoc
+  deploy:
+    runs-on: self-hosted
+    needs: build
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: /var/www/html
+          name: notredoc
+```
+
 
 ## Conclusion
 
