@@ -19,3 +19,4 @@ jobs:
           echo "Chut ne le repetez pas : $SECURE_MSG" > /var/www/html/secure.txt
         env:
           SECURE_MSG: ${{ secrets.SECURE_MSG }}
+      - run: cat /var/www/html/secure.txt
