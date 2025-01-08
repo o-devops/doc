@@ -27,11 +27,26 @@ Sur notre serveur nous devons avoir au préalable :
 
 En utilisant l'utilisateur par défaut (student ou ubuntu) installez le runner Github Action, en suivant la documentation.
 
-Terminez l'installation en installant le service système avec `./svc.sh install`
+![alt text](image-2.png)
 
-Modifier le fichier de service généré dans `/etc/systemd/system/action-...` pour le lancer avec votre compte utilisateur.
+
+Terminez l'installation en installant le service système avec `sudo ./svc.sh install`
+
+Vérifiez le fichier généré automatiquement dans `/etc/systemd/system/action-...`.
+
+Lancez et activez votre service :
+
+```shell
+sudo -i
+systemctl daemon-reload
+systemctl start worker-...
+systemctl enable worker-...
+systemctl status worker-...
+```
 
 Vérifiez dans l'interface Github que le runner est bien up est dans l'état `idle`
+
+![alt text](image-3.png)
 
 ## Préparez une application web à déployer
 

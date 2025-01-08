@@ -8,13 +8,35 @@ on:
       - preprod
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get data from repository
+        uses: actions/checkout@v4
+
+#      - uses: actions/setup-python@v5
+#        with:
+#          python-version: '3.13'
+#
+#      - run: pip install -r requirements.txt
+#
+#      - name: generate static files
+#        run: mkdocs build
+
+      - run: docker build --target build -t mkdocs-builder .
+
+      - run: docker container run --rm -v ./site:/app/site mkdocs-builder
+
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v4 # or specific "vX.X.X" version tag for this action
+        with:
+          path: site/
   deploy:
     runs-on: self-hosted
 
     steps:
-      - uses: actions/checkout@v4
-      - name: test env and deploy a sample html file
-        run: |
-          ls -alh
-          whoami
-          cp index.html /var/www/html/
+      - uses: actions/download-artifact@v4
+        with:
+          path: /var/www/html
