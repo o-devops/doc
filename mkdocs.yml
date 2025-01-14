@@ -52,6 +52,8 @@ nav:
     - Les bases: docker/docker-basics.md
   - Ansible:
     - Introduction à Ansible: ansible/intro.md
+  - Git:
+    - Utilisation des tags: git/git-tag.md
 
 markdown_extensions:
   #- mdx_truly_sane_lists # for mkdocs to indent nested lists with 2 spaces VS 4 by default
