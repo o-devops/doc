@@ -5,6 +5,8 @@ tags:
 
 # Documentations DevOps
 
-Cette documentation a pour but de centraliser différentes informations utiles au métier de DevOps.
+Cette documentation est rédigée et adaptée pendant les temps de préparation et de cours de la formation Expert DevOps donnée par [oclock.io](https://oclock.io/formations/formation-expert-devops)
 
-Elle s'addresse principalement aux apprenants en reconversion pro, le but est de couvrir l'ensemble des principes et technologies indispensables à une intégration dans le monde de l'entreprise.
+Elle n'est pas le support de cours officiel Oclock et n'a pas vocation à s'y substituer, c'est un simple complément d'information et un endroit pour que les étudiants puissent contribuer collaborativement au contenu de leur cours.
+
+Sa lecture conviendra aux apprenants Oclock DevOps, et à tous les DevOps en devenir.

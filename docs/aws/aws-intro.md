@@ -85,3 +85,6 @@ il est important avant d'utiliser un service professionnellement de déterminer 
 AWS est responsable de ses services : sécurité des datacenters, infra logicielle, matérielle et réseau, système de virtualisation et isolation des VM's.
 
 Par contre les utilisateurs sont responsable des éléments qui sont sous leur maitrise : mise à jour des OS qu'ils ont installé, politique des firewall et des comptes IAM, gestion des mots de passe etc.
+
+Dans le cas des services de type IaaS la responsablité du client sera plus grande alors que dans le cas des services PaaS ce sera plus limité et sous la responsabilité d'AWS (mises à jour, correctifs, pare-feu).
+
