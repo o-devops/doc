@@ -34,7 +34,7 @@ theme:
     - toc.integrate
 
 nav:
-  - Accueil: /
+  - Accueil: /doc/
   - Github:
     - Gestion de compte: github/account.md
     - Les hooks git: github/git-hooks.md
@@ -56,6 +56,10 @@ nav:
   - Git:
     - Utilisation des tags: git/git-tag.md
     - Produire des images avec Github: github/ga-docker-push.md
+  - AWS:
+    - Introduction: aws/aws-intro.md
+    - La documentation: aws/aws-doc.md
+    - Les coûts AWS: aws/aws-cost.md
 
 markdown_extensions:
   #- mdx_truly_sane_lists # for mkdocs to indent nested lists with 2 spaces VS 4 by default
