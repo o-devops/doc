@@ -7,7 +7,7 @@ tags:
 
 ## Les organisations Github
 
-Par défaut vous utilisez Github avec un compte personnel mais si vous souhaitez rassembler la gestion de plusieurs dépôt avec une communauté d'utilisateur alors le mieux est de créer un organisation Github. Deux cas d'usage peuvent se prếter à la création d'une organisation :
+Par défaut vous utilisez Github avec un compte personnel mais si vous souhaitez rassembler la gestion de plusieurs dépôts avec une communauté d'utilisateur alors le mieux est de créer un organisation Github. Deux cas d'usage peuvent se prếter à la création d'une organisation :
 
 - Création d'un projet perso ou open source qui pourra rassembler plusieurs dépôts
 - Utilisation dans un contexte pro, votre entreprise rassemblera tous les dépôts dans une organisation, généralement à son nom.
