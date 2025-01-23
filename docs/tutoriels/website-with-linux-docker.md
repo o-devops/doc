@@ -6,9 +6,14 @@ tags:
   - ssh
   - dns
 
+hide:
+  - footer
 ---
 
 # Mettre en ligne un site web avec Linux et Docker
+
+!!! note
+    Ce tutoriel vous est proposé par l'équipe de l'École O'clock, vous pouvez découvrir nos formations en infrastructures, systèmes et réseaux en cliquant [ici](https://oclock.io/categorieformation/systemes-reseaux)
 
 Dans ce tutoriel nous allons mettre en ligne un site web simple en utilisant Linux et Docker.
 
@@ -199,11 +204,22 @@ pages:
                     url: https://oclock.io/formations/formation-expert-devops
                   - title: AIS - Expert Cybersécurité
                     url: https://oclock.io/formations/expert-cybersecurite
+              - title: Réseaux sociaux
+                links:
+                  - title: X
+                    url: https://x.com/Oclock_io
+                  - title: Instagram
+                    url: https://www.instagram.com/oclock_io/
+                  - title: Linkedin
+                    url: https://www.linkedin.com/school/ecole-o'clock/
 
 
           - type: twitch-channels
             channels:
               - oclock_io
+              - lafibredudev
+              - monpetitpc
+              - devgirl_
               - SebAWS
 
       - size: full

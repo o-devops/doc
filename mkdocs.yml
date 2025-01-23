@@ -6,6 +6,8 @@ site_author: Aurelien
 repo_name: o-devops/doc
 repo_url: https://github.com/o-devops/doc
 
+copyright: Retrouvez toute les formations O'clock sur <a href=https://oclock.io>le site oclock.io</a>
+
 theme:
   name: material
   palette:
@@ -32,6 +34,9 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - toc.integrate
+    - navigation.footer
+    - navigation.top
+    - header.autohide
 
 nav:
   - Accueil: /doc/
