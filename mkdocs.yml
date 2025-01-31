@@ -66,6 +66,8 @@ nav:
     - La documentation: aws/aws-doc.md
     - Les coûts AWS: aws/aws-cost.md
     - IAM: aws/aws-iam.md
+  - Linux:
+    - Le gestionnaire de paquet snap: linux/snap.md
   - Tutoriels:
     - Un site web avec Linux et Docker: tutoriels/website-with-linux-docker.md
 
