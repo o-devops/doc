@@ -23,6 +23,31 @@ En découle directement ses avantages :
 
 Ainsi une startup démarrera avec 0 investissement dans l'infrastructure et son coût augmentera ou diminura en fonction de son activité et donc de son chiffre d'affaire.
 
+## Connexion à AWS
+
+Vous pouvez créer un compte [ici](https://aws.amazon.com)
+
+Pour un usage modéré vous pouvez vous en sortir sans frais pendant 1 an, renseignez vous sur les paramètres de gratuité [ici](https://aws.amazon.com/fr/free)
+
+!!! warning
+    Le compte "gratuit" nécessite tout de même de renseigner votre carte bancaire et en cas de dépassement vous serez facturé et prélevé automatiquement. Surveillez donc bien votre usage via le cost manageur.
+
+## Le root account
+
+Lorsque vous créez votre premier compte, vous utilisez ce qu'on appelle le root account (utilisateur racine), ce compte a absoluments tous les droits, il est donc recommandé de créer un compte IAM et de se servir de celui ci pour se connecter au quotidien.
+
+Dans un contexte pro il est important d'utiliser les compte IAM qui sont nominatifs et permettent d'encadrer précisement les droits de chaque utilisateurs.
+
+## Création de votre premier compte IAM
+
+Afin de créer votre premier compte IAM procédez ainsi :
+
+- Avec votre root account, chargez le service IAM.
+- Créez un groupe IAM, nommé administrateur et affectez dedans la policy/stratégie AdministratorFullAccess ainsi :
+![alt text](image-7.png)
+- Créez un utilisateur IAM pour vous et affectez lui le groupe précédent.
+
+
 ## Les différents type de service cloud
 
 On peut séparer les services cloud en 3 catégories :
