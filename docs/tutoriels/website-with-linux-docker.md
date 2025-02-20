@@ -163,7 +163,7 @@ services:
   glance:
     image: glanceapp/glance
     volumes:
-      - ./glance.yml:/app/glance.yml
+      - ./glance.yml:/app/config/glance.yml
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
         #    ports:
